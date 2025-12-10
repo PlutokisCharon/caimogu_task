@@ -126,7 +126,6 @@ public class CaiMoGuHelp {
                 JSONObject jsonObject = JSON.parseObject(response.body().string());
                 Integer status = jsonObject.getInteger("status");
                 String info = jsonObject.getString("info");
-                log.error(jsonObject.toJSONString());
                 if ("请勿重复评分".equals(info)) {
                     return 0;
                 }
